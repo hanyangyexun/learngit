@@ -1,0 +1,5 @@
+Windows
+C:\mingw64\bin\gcc.exe -Wl,--stack,46777216 server_stub.c generated_nodeset.c open62541.c -lws2_32 -o opcuaamlserver.exe
+
+Linux
+gcc -std=c99 server_stub.c generated_nodeset.c open62541.c -o opcuaamlserver

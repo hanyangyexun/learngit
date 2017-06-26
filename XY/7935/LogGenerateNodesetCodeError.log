@@ -1,0 +1,21 @@
+INFO:__main__:Preprocessing (existing) C:\WebGenesis\Developer912\AML2UA\base\apps\Aml2UAConvDialog\open62541\Opc.Ua.NodeSet2.xml
+INFO:__main__:Preprocessing C:\WebGenesis\Developer912\AML2UA\base\apps\Aml2UAConvDialog\open62541\Opc.Ua.AMLBaseTypes.NodeSet2.xml
+INFO:__main__:Preprocessing C:\WebGenesis\Developer912\AML2UA\data\contents\7935\Robot.xml
+Traceback (most recent call last):
+  File "C:\WebGenesis\Developer912\AML2UA\base\apps\Aml2UAConvDialog\open62541\nodeset_compiler\nodeset_compiler.py", line 100, in <module>
+    ns.addNodeSet(xml)
+  File "C:\WebGenesis\Developer912\AML2UA\base\apps\Aml2UAConvDialog\open62541\nodeset_compiler\nodeset.py", line 196, in addNodeSet
+    node = self.createNode(nd, nsMapping, hidden)
+  File "C:\WebGenesis\Developer912\AML2UA\base\apps\Aml2UAConvDialog\open62541\nodeset_compiler\nodeset.py", line 146, in createNode
+    node = ObjectNode(xmlelement)
+  File "C:\WebGenesis\Developer912\AML2UA\base\apps\Aml2UAConvDialog\open62541\nodeset_compiler\nodes.py", line 214, in __init__
+    self.parseXML(xmlelement)
+  File "C:\WebGenesis\Developer912\AML2UA\base\apps\Aml2UAConvDialog\open62541\nodeset_compiler\nodes.py", line 217, in parseXML
+    Node.parseXML(self, xmlelement)
+  File "C:\WebGenesis\Developer912\AML2UA\base\apps\Aml2UAConvDialog\open62541\nodeset_compiler\nodes.py", line 115, in parseXML
+    self.parseXMLReferences(x)
+  File "C:\WebGenesis\Developer912\AML2UA\base\apps\Aml2UAConvDialog\open62541\nodeset_compiler\nodes.py", line 123, in parseXMLReferences
+    target = NodeId(ref.firstChild.data)
+  File "C:\WebGenesis\Developer912\AML2UA\base\apps\Aml2UAConvDialog\open62541\nodeset_compiler\datatypes.py", line 220, in __init__
+    self.i = int(p[2:])
+ValueError: invalid literal for int() with base 10: ''

@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CAEXFile FileName="Robot.aml" SchemaVersion="2.15" xsi:noNamespaceSchemaLocation="CAEX_ClassModel_V2.15.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<AdditionalInformation>
+		<WriterHeader>
+			<WriterName>AutomationML Editor</WriterName>
+			<WriterID>916578CA-FE0D-474E-A4FC-9E1719892369</WriterID>
+			<WriterVendor>AutomationML e.V.</WriterVendor>
+			<WriterVendorURL>www.AutomationML.org</WriterVendorURL>
+			<WriterVersion>4.7.0.0</WriterVersion>
+			<WriterRelease>4.7.0.0</WriterRelease>
+			<LastWritingDateTime>2017-05-22T21:35:16.9328663+09:00</LastWritingDateTime>
+			<WriterProjectTitle>unspecified</WriterProjectTitle>
+			<WriterProjectID>unspecified</WriterProjectID>
+		</WriterHeader>
+	</AdditionalInformation>
+	<AdditionalInformation AutomationMLVersion="2.0" />
+	<InstanceHierarchy Name="MyInstanceHierarchy">
+		<Version>1.0.0</Version>
+		<InternalElement Name="Robot" ID="cffee835-3551-4d01-8ec3-2ad88d27ef0a">
+			<InternalElement Name="Control" ID="f2657a6c-080d-4530-8e4b-4eecd77e6c21">
+				<Attribute Name="Parameters_1">
+					<Attribute Name="Control_1" />
+					<Attribute Name="Control_2" />
+				</Attribute>
+				<SupportedRoleClass RefRoleClassPath="MyRoleClassLib/ControlCommand" />
+			</InternalElement>
+			<InternalElement Name="Received" ID="528bdc67-9612-4586-9b53-84034fa64330">
+				<Attribute Name="Parameters_2">
+					<Description>Control information</Description>
+					<Attribute Name="Coordinate_x" AttributeDataType="xs:float">
+						<Value>0</Value>
+					</Attribute>
+					<Attribute Name="Coordinate_y" AttributeDataType="xs:float">
+						<Value>0</Value>
+					</Attribute>
+					<Attribute Name="Coordinate_z" AttributeDataType="xs:float">
+						<Value>0</Value>
+					</Attribute>
+					<Attribute Name="Angle_1" AttributeDataType="xs:float">
+						<Value>0</Value>
+					</Attribute>
+					<Attribute Name="Angle_2" AttributeDataType="xs:float">
+						<Value>0</Value>
+					</Attribute>
+					<Attribute Name="Angle_3" AttributeDataType="xs:float">
+						<Value>0</Value>
+					</Attribute>
+					<Attribute Name="Angle_4" AttributeDataType="xs:float">
+						<Value>0</Value>
+					</Attribute>
+					<Attribute Name="Angle_5" AttributeDataType="xs:float">
+						<Value>0</Value>
+					</Attribute>
+					<Attribute Name="Angle_6" AttributeDataType="xs:float">
+						<Value>0</Value>
+					</Attribute>
+				</Attribute>
+				<SupportedRoleClass RefRoleClassPath="MyRoleClassLib/ReceivedMessage" />
+			</InternalElement>
+			<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole/Resource" />
+		</InternalElement>
+	</InstanceHierarchy>
+	<InterfaceClassLib Name="MyInterfaceClassLib">
+		<Version>1.0.0</Version>
+		<InterfaceClass Name="IPowerSupply" />
+	</InterfaceClassLib>
+	<RoleClassLib Name="MyRoleClassLib">
+		<Version>1.0.0</Version>
+		<RoleClass Name="ControlCommand">
+			<Revision>
+				<RevisionDate>2017-05-22T21:03:39.6723492</RevisionDate>
+				<AuthorName>Please enter your name</AuthorName>
+			</Revision>
+		</RoleClass>
+		<RoleClass Name="ReceivedMessage" />
+	</RoleClassLib>
+	<RoleClassLib Name="AutomationMLBaseRoleClassLib">
+		<Description>Automation Markup Language base role class library</Description>
+		<Version>2.2.0</Version>
+		<RoleClass Name="AutomationMLBaseRole">
+			<RoleClass Name="Group" RefBaseClassPath="AutomationMLBaseRole">
+				<Attribute Name="AssociatedFacet" AttributeDataType="xs:string" />
+			</RoleClass>
+			<RoleClass Name="Facet" RefBaseClassPath="AutomationMLBaseRole" />
+			<RoleClass Name="Port" RefBaseClassPath="AutomationMLBaseRole">
+				<Attribute Name="Direction" AttributeDataType="xs:string" />
+				<Attribute Name="Cardinality">
+					<Attribute Name="MinOccur" AttributeDataType="xs:unsignedInt" />
+					<Attribute Name="MaxOccur" AttributeDataType="xs:unsignedInt" />
+				</Attribute>
+				<Attribute Name="Category" AttributeDataType="xs:string" />
+				<ExternalInterface Name="ConnectionPoint" ID="9942bd9c-c19d-44e4-a197-11b9edf264e7" />
+			</RoleClass>
+			<RoleClass Name="Resource" RefBaseClassPath="AutomationMLBaseRole" />
+			<RoleClass Name="Product" RefBaseClassPath="AutomationMLBaseRole" />
+			<RoleClass Name="Process" RefBaseClassPath="AutomationMLBaseRole" />
+			<RoleClass Name="Structure" RefBaseClassPath="AutomationMLBaseRole">
+				<RoleClass Name="ProductStructure" RefBaseClassPath="Structure" />
+				<RoleClass Name="ProcessStructure" RefBaseClassPath="Structure" />
+				<RoleClass Name="ResourceStructure" RefBaseClassPath="Structure" />
+			</RoleClass>
+			<RoleClass Name="PropertySet" RefBaseClassPath="AutomationMLBaseRole" />
+		</RoleClass>
+	</RoleClassLib>
+	<SystemUnitClassLib Name="MySystemUnitClassLib">
+		<Version>1.0.0</Version>
+		<SystemUnitClass Name="MyRobot">
+			<SupportedRoleClass RefRoleClassPath="AutomationMLBaseRoleClassLib/AutomationMLBaseRole/Resource" />
+		</SystemUnitClass>
+	</SystemUnitClassLib>
+</CAEXFile>
