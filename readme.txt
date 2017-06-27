@@ -8,3 +8,4 @@ Creating a new branch is quick.
 creating once more.
 cteating again.
 This is XunYe/YeXun.
+db.ini is .ignore
