@@ -1,5 +1,4 @@
 # My configurations:
-db.ini
 o
 readme.txt
 igno.txt
@@ -8,4 +7,3 @@ bootstrap
 gitskill/README.md
 deploy_key_rsa
 my.ini
-*.ini
